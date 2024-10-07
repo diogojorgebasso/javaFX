@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #BBBCB6;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.org.javafxdemo.CanvasController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <BorderPane>
+      <left>
+         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                <Button onAction="#onClearImage" text="Clear Image">
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Button>
+            <Rectangle fx:id="colorDisplay" height="100.0" smooth="false" stroke="WHITE" strokeType="INSIDE" width="100.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                     <Label text="Red" />
+                     <Slider fx:id="redSlider" max="255.0" min="1" showTickLabels="true" showTickMarks="true" />
+                     <Label text="Green" />
+                     <Slider fx:id="greenSlider" max="255.0" min="1" showTickLabels="true" showTickMarks="true" />
+                     <Label text="Blue" />
+                     <Slider fx:id="blueSlider" max="255.0" min="1" showTickLabels="true" showTickMarks="true" />
+               </children>
+            </VBox>
+         </VBox>
+      </left>
+      <right>
+         <Canvas fx:id="canvas" height="318.0" nodeOrientation="INHERIT" pickOnBounds="true" width="333.0" />
+      </right>
+   </BorderPane>
+</VBox>
